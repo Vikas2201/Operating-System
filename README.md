@@ -3,8 +3,8 @@
 This repository consists Programs related to the course "Operating System" (MCCSC09).
 
 ## Objective 
-Design and develop programs using C/C++
-Effectively use Linux system calls for process control and management, especially, fork, exec, wait system calls.
+  Design and develop programs using C/C++.
+  Effectively use Linux system calls for process control and management, especially, fork, exec, wait system calls.
 
 ## Problem 1
 Perform Linux shell commands using Ubuntu system.
