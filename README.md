@@ -10,7 +10,8 @@ This repository consists Programs related to the course "Operating System" (MCCS
 Perform Linux shell commands using Ubuntu system.
 
 ## Problem 2
-Write C programs using fork(), getpid(), getppid() and exec() system calls.
+ 1) Write C programs using fork(), getpid(), getppid() and exec() system calls.
+ 2) Write a program to create a child process and display the process id of the parent process from the child process.
 
 ## Problem 3
 Write C/C++ Program to perform CPU Scheduling Algorithms :- 
@@ -28,6 +29,7 @@ Write C/C++ Program to perform page replacement Algorithms :-
 1) First In First Out (FIFO) Algorithm 
 2) Least Recently Used (LRU) Algorithm
 3) Least Frequently Used (LFU) Algorithm
+4) First In First Out (FIFO) Algorthim suffers from Belady’s anomaly
 
 ## Problem 6
 Write C/C++ Program to perform disk scheduling Algorithms :-
