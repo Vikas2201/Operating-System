@@ -1,23 +1,15 @@
 #include<stdio.h>
-int main()
+void fifo(int n , int *rs , int m)
 {
-    int i, j, m, n, rs[50], frame[10], k, avail, count=0 ;
+	int i , j , k , avail , count = 0 , frame[n];
 	float hit_ratio , miss_ratio ;
-    printf("\nEnter the no. of frames:");
-    scanf("%d",&n);
-    printf("\nEnter the length of the Reference string:");
-    scanf("%d",&m);
-    printf("\nEnter the reference string :");
-    for(i=0;i<m;i++)
-    {
-    	scanf("%d",&rs[i]);
-	}
-    for(j=0;j<n;j++)
+	for(j=0;j<n;j++)
     {
 	    frame[j] = -1;
 	}
+	
 	j = 0;
-	printf("Reference String\n");
+	printf("\nGiven reference string on using FIFO page replacement\n");
 	for(i=0 ; i<m ; i++)
 	{
         printf("%d\t\t",rs[i]);
@@ -35,11 +27,37 @@ int main()
         }
         printf("\n");
     }
+    
     miss_ratio = count/(float)m ;
     hit_ratio = 1 - miss_ratio ;
+    
+    printf("\nWhen the number of frames are : %d",n);
 	printf("\nTotal Number of Miss : %d",count);
     printf("\nTotal Number Of Hit : %d",(m - count));
-    printf("\nHit Ratio : %.2f",hit_ratio);
-    printf("\nMiss Ratio : %.2f",miss_ratio);
+    printf("\nThe number of page faults is : %d\n",count);
+    return ;
+}
+int main()
+{
+    int m , i;
+	printf("\nEnter the length of the Reference string : ");
+    scanf("%d",&m);
+    
+    int rs[m];
+    printf("\nEnter the reference string : ");
+    for(i=0;i<m;i++)
+    {
+    	scanf("%d",&rs[i]);
+	}
+	
+	int n = 3;
+ 
+    fifo(n, rs, m);
+ 
+    // Increase value of frame size
+    n = 4;
+ 
+    // The page fault increases even after increasing then the number of frames. This is Belady's Anomaly
+    fifo(n , rs , m);
 	return 0;
 }
